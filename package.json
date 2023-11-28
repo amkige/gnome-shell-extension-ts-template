@@ -1,0 +1,36 @@
+{
+	"name": "gnome-shell-extension-ts-template",
+	"version": "1.0.0",
+	"description": "GNOME Shell extension starter with typescript and node modules bundling.",
+	"type": "module",
+	"scripts": {
+		"build": "rm -rf out/dist && rollup -c",
+		"pack": "sh scripts/pack.sh",
+		"install": "sh scripts/install.sh",
+		"deploy": "pnpm run build && pnpm run pack && pnpm run install",
+		"format": "biome format src --write",
+		"lint": "biome lint src"
+	},
+	"keywords": [
+		"gnome",
+		"shell",
+		"extension",
+		"template",
+		"starter",
+		"typescript",
+		"rollup"
+	],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@biomejs/biome": "^1.4.0",
+		"@girs/gjs": "^3.2.6",
+		"@girs/gnome-shell": "45.0.0-beta2",
+		"@rollup/plugin-node-resolve": "^15.2.3",
+		"@rollup/plugin-typescript": "^11.1.5",
+		"rollup": "^4.6.0",
+		"rollup-plugin-copy": "^3.5.0",
+		"tslib": "^2.6.2",
+		"typescript": "^5.3.2"
+	}
+}
